@@ -36,6 +36,7 @@ public class EmployeeServiceImpl implements EmployeeService{
         Employee emp = employeeRepository.findById(id).get();
         emp.setName(employee.getName());
         emp.setEmail(employee.getEmail());
+        employeeRepository.save(emp);
         return emp;
     }
 
